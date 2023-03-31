@@ -1,0 +1,22 @@
+using System;
+
+namespace libroJava
+{
+    class Program           //CONVERSOR DE EUROS A PESETAS
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Escribe una cantidad para pasar a pesetas");
+            double euros= int.Parse(Console.ReadLine());
+            double pesetas = 166.386;
+            double conversor = euros * pesetas;
+           
+
+          
+            Console.WriteLine(conversor);
+            
+
+        }
+    }
+}

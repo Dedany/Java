@@ -1,0 +1,21 @@
+using System;
+
+namespace libroJava
+{
+    class Program           /*Escribe un programa que calcule el total de una factura a
+                            partir de la base imponible (precio sin IVA). La base
+                            imponible estará almacenada en una variable.*/
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("escribe un precio en €...");
+            int importe = int.Parse(Console.ReadLine());
+            double baseImponible = importe*21/100;
+            double resultado = importe - baseImponible;
+
+
+            Console.WriteLine(resultado);
+
+        }
+    }
+}

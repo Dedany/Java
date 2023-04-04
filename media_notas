@@ -1,0 +1,45 @@
+using System;
+
+namespace libroJava
+{
+    class Program
+    {
+        /* Realiza un programa que calcule la media de tres notas.*/
+
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vamos a calcular la media de 3 notas");
+            Console.WriteLine("***********************************");
+            Console.Write("introduce la primera :  ");
+            int primeranota = int.Parse(Console.ReadLine());
+            Console.Write("introduce la segunda :  ");
+            int segundaranota = int.Parse(Console.ReadLine());
+            Console.Write("introduce la tercera :  ");
+            int terceranota = int.Parse(Console.ReadLine());
+            int todasnotas = primeranota + segundaranota + terceranota;
+            int media = todasnotas / 3;
+
+            Console.WriteLine("la media es "+todasnotas/3 );
+
+            if ((media>4) && (media < 7)){
+
+                Console.WriteLine("tienes un suficiente");
+            }
+            if ((media > 6) && (media < 8)){
+
+                Console.WriteLine("tienes un notable");
+            }
+            if ((media > 8) && (media <=10)){
+
+                Console.WriteLine("tienes un sobresaliente");
+            }
+
+
+
+        }
+        
+        
+    }
+}

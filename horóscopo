@@ -1,0 +1,175 @@
+using System;
+
+namespace libroJava
+{
+    class Program
+    {
+        /* Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.*/
+
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("te voy a decir tu horóscopo");
+            Console.WriteLine("escribe el día en que naciste");
+            int dia = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("ahora el mes ");
+            string mes = Console.ReadLine().ToLower();
+
+            switch (mes)
+
+            { 
+                case "enero":
+
+                    if ((dia > 1) && (dia <= 19))
+                    {
+                        Console.WriteLine("tu signo es Capricornio");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Acuario");
+                    }
+                    break;
+
+                case "febrero":
+
+                    if ((dia > 1) && (dia <= 18))
+                    {
+                        Console.WriteLine("tu signo es Acuario");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Piscis");
+                    }
+                    break;
+                    
+
+                case "marzo":
+
+                    if ((dia > 1) && (dia <= 20))
+                    {
+                        Console.WriteLine("tu signo es Piscis");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Aries");
+                    }
+                    break;
+
+                case "abril":
+
+                    if ((dia > 1) && (dia <= 19))
+                    {
+                        Console.WriteLine("tu signo es Aries");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Tauro");
+                    }
+                    break;
+
+                case "mayo":
+
+                    if ((dia > 1) && (dia <= 20))
+                    {
+                        Console.WriteLine("tu signo es Tauro");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Geminis");
+                    }
+                    break;
+
+                case "junio":
+
+                    if ((dia > 1) && (dia <= 20))
+                    {
+                        Console.WriteLine("tu signo es Geminis");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Cancer");
+                    }
+                    break;
+
+                case "julio":
+
+                    if ((dia > 1) && (dia <= 22))
+                    {
+                        Console.WriteLine("tu signo es Cancer");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Cancer");
+                    }
+                    break;
+
+                case "agosto":
+
+                    if ((dia > 1) && (dia <= 22))
+                    {
+                        Console.WriteLine("tu signo es Leo");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Virgo");
+                    }
+                    break;
+
+                case "septiembre":
+
+                    if ((dia > 1) && (dia <= 22))
+                    {
+                        Console.WriteLine("tu signo es Virgo");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Libra");
+                    }
+                    break;
+
+                case "octubre":
+
+                    if ((dia > 1) && (dia <= 22))
+                    {
+                        Console.WriteLine("tu signo es Libra");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Escorpio");
+                    }
+                    break;
+
+                case "noviembre":
+
+                    if ((dia > 1) && (dia <= 21))
+                    {
+                        Console.WriteLine("tu signo es Escorpio");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Sagitario");
+                    }
+                    break;
+
+                case "diciembre":
+
+                    if ((dia > 1) && (dia <= 21))
+                    {
+                        Console.WriteLine("tu signo es Sagitario");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tu signo es Capricornio");
+                    }
+                    break;
+            }
+            
+
+        }
+        
+        
+    }
+}

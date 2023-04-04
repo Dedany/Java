@@ -1,0 +1,55 @@
+using System;
+
+namespace libroJava
+{
+    class Program
+    {
+        /*Escribe un programa que ordene tres números enteros introducidos por teclado..*/
+
+
+
+        static void Main(string[] args)
+        {
+            Console.Write("escribe el numero 1  ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.Write("escribe el numero 2  ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            Console.Write("escribe el numero 3  ");
+            int num3 = int.Parse(Console.ReadLine());
+            int orden ;
+
+            if (num1 > num2)
+            {
+                orden = num1;
+                num1 = num2;
+                num2 = orden;
+
+            }
+
+            if (num2 > num3)
+            {
+                orden = num2;
+                num2 = num3;
+                num3 = orden;
+
+            }
+
+            if (num1 > num2)
+            {
+                orden = num1;
+                num1 = num2;
+                num2 = orden;
+
+            }
+
+            Console.WriteLine("el orden es...{0}   {1}   {2}" ,num1,num2,num3);
+
+
+
+        }
+        
+        
+    }
+}

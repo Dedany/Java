@@ -1,0 +1,33 @@
+namespace libroJava
+{
+    class Program
+    {
+        /*Escribe un programa que calcule el salario semanal de un
+                trabajador teniendo en cuenta que las horas ordinarias (40 primeras
+                horas de trabajo) se pagan a 12 euros la hora.A partir de la hora 41,
+            se pagan a 16 euros la hora.*/
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("introduce el numero de horas trabajadas durante la semana");
+
+            int horas = int.Parse(Console.ReadLine());
+            int horasdmas;
+         
+
+            if (horas > 40)
+            {
+                horasdmas= horas-40;
+
+
+
+                Console.WriteLine("el trabajador percibirá un sueldo de {0}",(40 * 12 )+ (horasdmas * 16));
+            }
+               else
+                
+                Console.WriteLine("el trabajadores percibirá un sueldo de " +horas*12);
+        }
+        
+        
+    }
+}

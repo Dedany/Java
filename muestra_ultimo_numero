@@ -1,0 +1,21 @@
+using System;
+
+namespace libroJava
+{
+    class Program
+    {
+        /*Escribe un programa que diga cuál es la última cifra de un número entero introducido por teclado.*/
+
+
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("programa que dice cual es la ultima cifra de un numero");
+            int num_entero = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("la última cifra es ..."+ (num_entero%10));
+        }
+
+    }
+}

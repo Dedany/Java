@@ -1,0 +1,103 @@
+using System;
+
+namespace libroJava
+{
+    class Program
+    {
+        /*Realiza un programa que nos diga si hay probabilidad de que nuestra pareja nos está siendo infiel. 
+      * El programa irá haciendo preguntas que el usuario contestará con verdadero o falso. 
+      * Cada pregunta contestada como verdadero sumará 3 puntos. Las preguntas contestadas con falso no suman puntos. A continuación se listan las preguntas del test.*/
+
+
+
+
+        static void Main(string[] args)
+        {
+            int verdadero = 0;
+
+            Console.WriteLine("Tu pareja parece estar más inquieta de lo normal sin ningún motivo aparente (y/n).");
+            char respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero=verdadero+3;
+            }
+            Console.WriteLine("Ha aumentado sus gastos de vestuario (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Ha perdido el interés que mostraba anteriormente por ti (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Ahora se afeita y se asea con más frecuencia (si es hombre) o ahora se arregla el pelo y se asea con más frecuencia(si es mujer)(y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("No te deja que mires la agenda de su teléfono móvil (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("A veces tiene llamadas que dice no querer contestar cuando estás tú delante(y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Últimamente se preocupa más en cuidar la línea y/o estar bronceado/a (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Muchos días viene tarde después de trabajar porque dice tener mucho más trabajo(y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Has notado que últimamente se perfuma más (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+            Console.WriteLine("Se confunde y te dice que ha estado en sitios donde no ha ido contigo (y/n).");
+            respuesta = char.Parse(Console.ReadLine());
+            if (respuesta.Equals('y'))
+            {
+                verdadero = verdadero + 3;
+
+            }
+
+            if((verdadero >=0)&&(verdadero<11))
+            {
+                Console.WriteLine("¡Enhorabuena! tu pareja parece ser totalmente fiel.");
+            }
+            if ((verdadero > 10)&&(verdadero<23))
+            {
+                Console.WriteLine("Quizás exista el peligro de otra persona en su vida o en su mente, aunque seguramente será algo sin importancia. No bajes la guardia..");
+            }
+            if ((verdadero > 21) && (verdadero < 31))
+            {
+                Console.WriteLine("Tu pareja tiene todos los ingredientes para estar viviendo un romance con otra persona. Te aconsejamos que indagues un poco más y averigües que es lo que está pasando por su cabeza.");
+            }
+        }
+
+    }
+}

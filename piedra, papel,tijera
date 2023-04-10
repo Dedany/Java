@@ -1,0 +1,67 @@
+using System;
+
+namespace aprendejava
+{
+    /*Implementa el juego piedra, papel y tijera. Primero, el usuario 1 introduce su jugada y luego el usuario 2. 
+     * Si alguno de los usuarios introduce una opción incorrecta, el programa deberá mostrar un mensaje de error..*/
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            
+                Console.WriteLine("turno del primer jugador");
+                Console.WriteLine("introduce Piedra, Papel o Tijera");
+                string tiro1 = Console.ReadLine().ToLower();
+                Console.WriteLine("turno del segundo jugador");
+                Console.WriteLine("introduce Piedra, Papel o Tijera");
+                string tiro2 = Console.ReadLine().ToLower();
+
+                int ganador = 2;
+
+
+
+            if (tiro1.Equals(tiro2))
+                {
+                    Console.WriteLine("empate");
+                }
+                else
+                {
+
+                   
+                    switch (tiro1)
+                    {
+
+                        case "piedra":
+                            if (tiro2.Equals("tijera"))
+                            {
+                                ganador = 1;
+                            }
+                            break;
+                        case "papel":
+                            if (tiro2.Equals("piedra"))
+                            {
+                                ganador = 1;
+                            }
+                            break;
+                        case "tijera":
+                            if (tiro2.Equals("papel"))
+                            {
+                                ganador = 1;
+
+
+                            }
+                            break;
+
+
+                    }
+
+                    Console.WriteLine("gana el jugador " + ganador);
+
+                }
+
+        }  
+        
+    }
+}

@@ -1,0 +1,57 @@
+using System;
+
+namespace aprendejava
+{
+    /*Realiza un programa que, dado un día de la semana (de lunes a viernes)
+     * y una hora (horas y minutos), calcule cuántos minutos faltan para el fin de semana. 
+     * Se considerará que el fin de semana comienza el viernes a las 15:00h. Se da por
+     * hecho que el usuario introducirá un día y hora correctos, anterior al viernes a las
+     * 15:00h.*/
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("escribe un dia de la semana");
+            string dia = (Console.ReadLine());
+            Console.WriteLine("escribe una hora");
+            int hora = int.Parse(Console.ReadLine());
+            Console.WriteLine("escribe los minutos");
+            int min = int.Parse(Console.ReadLine());
+
+            int dianum = 0;
+            switch (dia){
+
+                case "lunes":
+                    dianum=0;
+                    break;
+                case "martes":
+                    dianum = 1;
+                    break;
+                case "miercoles":
+                    dianum = 2;
+                    break;
+                case "jueves":
+                    dianum = 3;
+                    break;
+                case "viernes":
+                    dianum = 4;
+                    break;
+
+               // default:
+                    
+                        Console.WriteLine("el día introducido no es correcto");
+                    
+
+
+                        
+
+            }
+
+            int minutostotales = (4 * 24 * 60) + (15 * 60);
+            int minutosactuales = (dianum * 24 * 60) + (hora * 60) + min;
+
+            Console.WriteLine("faltan ...   " + (minutostotales-minutosactuales) +"  para llegar al fin de semana");
+        }
+    }
+}

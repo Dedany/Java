@@ -1,16 +1,15 @@
 using System;
 
-namespace aprendejava
+namespace siguiente
 {
-    /*Implementa el juego piedra, papel y tijera. Primero, el usuario 1 introduce su jugada y luego el usuario 2. 
-     * Si alguno de los usuarios introduce una opción incorrecta, el programa deberá mostrar un mensaje de error..*/
-
     class Program
     {
         static void Main(string[] args)
         {
-            
-            
+            int ganador = 0;
+            char continuar=' ' ;
+            do
+            {
                 Console.WriteLine("turno del primer jugador");
                 Console.WriteLine("introduce Piedra, Papel o Tijera");
                 string tiro1 = Console.ReadLine().ToLower();
@@ -18,18 +17,21 @@ namespace aprendejava
                 Console.WriteLine("introduce Piedra, Papel o Tijera");
                 string tiro2 = Console.ReadLine().ToLower();
 
-                int ganador = 2;
+                 ganador = 2;
 
 
 
-            if (tiro1.Equals(tiro2))
+                if (tiro1.Equals(tiro2))
                 {
-                    Console.WriteLine("empate");
+                    Console.WriteLine("EMPATE  ");
+                    Console.WriteLine("________________________________");
+                    Console.WriteLine("¿Quiere continuar?");
+                    continuar = char.Parse(Console.ReadLine());
                 }
                 else
                 {
 
-                   
+
                     switch (tiro1)
                     {
 
@@ -57,11 +59,16 @@ namespace aprendejava
 
                     }
 
-                    Console.WriteLine("gana el jugador " + ganador);
+                    Console.WriteLine("Gana el jugador (" + ganador+")");
+                    Console.WriteLine("________________________________");
 
+                    Console.WriteLine("¿Quiere continuar? (y/n)");
+                    continuar = char.Parse(Console.ReadLine());
                 }
-
-        }  
-        
+            } while (continuar.Equals('y'));
+            Console.WriteLine("Adios");
+            
+        }
     }
 }
+

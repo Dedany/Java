@@ -1,0 +1,34 @@
+using System;
+
+namespace cosas
+{
+    class Program
+    {
+
+        
+        static void Main(string[] args)
+        {
+
+            int[,] matriz = new int[2, 4];//creo una matriz bidimensional
+            Random aleatorio = new Random(); //crea numeros al azar
+
+            for (int fila = 0; fila < matriz.GetLength(0); fila++)//recorrer las filas y rellena array filas
+            {
+                for (int columna = 0; columna < matriz.GetLength(1); columna++) //recorre las columnas y rellena array columna
+                {
+                    matriz[fila,columna] = aleatorio.Next(100);
+                }
+            }
+
+            for (int fila = 0; fila < matriz.GetLength(0); fila++)//vamos a mostrar el array
+            {
+                for (int columna = 0; columna < matriz.GetLength(1); columna++) 
+                {
+                    Console.Write(matriz[fila,columna]+"\t");
+                }
+                Console.WriteLine();//salta a la siguiente fila
+            }
+
+        }
+    }
+}

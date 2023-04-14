@@ -1,0 +1,45 @@
+using System;
+
+namespace cosas
+{
+    class Program
+    {
+
+        //Realiza un programa que permita ingresar los nombres de 5 empleados y sus sueldos respectivos.
+        //El programa debe mostrar el sueldo mayor y el nombre del empleados al que pertenece.
+        //A tener en cuenta:
+        //Los sueldos deben ser de tipo double
+        //• Los nombres deben ser de tipo string
+        //Ninguno puede tener sueldo 0
+        static void Main(string[] args)
+        {
+
+            string[] empleado = new string[5];
+            int[] sueldos = new int[5];
+            int max = 0;
+
+            for (int i = 0; i < empleado.Length; i++)
+            {
+                Console.WriteLine("ingresa el nombre del empleado " + "(" + (i + 1) + ")");
+                empleado[i] = Console.ReadLine();
+
+                
+                do
+                {Console.WriteLine("ingresa el sueldo del empleado " +(i + 1) + ", no puede ser menor o igual a 0.");
+                    sueldos[i] = int.Parse(Console.ReadLine());
+                } while (sueldos[i] <= 0);
+            }
+
+            for (int i = 1; i < empleado.Length; i++)
+            {
+                if (sueldos[max] < sueldos[i])
+
+                    max= i;
+                
+            }
+
+            Console.WriteLine("el sueldo maximo es de :   "+empleado[max]);
+            Console.WriteLine("y es de : "  +sueldos[max]);
+        }
+    }
+}

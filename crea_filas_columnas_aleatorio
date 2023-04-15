@@ -4,30 +4,52 @@ namespace cosas
 {
     class Program
     {
-
+        //crear filas y columnas aleatoriamente
         
         static void Main(string[] args)
         {
+          
+            int[,] array = new int [2,4];  //crear un array bidimensional
+            Random aleatorio = new Random();//crea numeros al azar
 
-            int[,] matriz = new int[2, 4];//creo una matriz bidimensional
-            Random aleatorio = new Random(); //crea numeros al azar
+            for (int i = 0; i < array.GetLength(0); i++)//rellena un vector denominado i(filas) siempre son (0);
 
-            for (int fila = 0; fila < matriz.GetLength(0); fila++)//recorrer las filas y rellena array filas
             {
-                for (int columna = 0; columna < matriz.GetLength(1); columna++) //recorre las columnas y rellena array columna
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    matriz[fila,columna] = aleatorio.Next(100);
+                    array[i, j] = aleatorio.Next(10);//crea en las posiciones de fila y columna numeros aleatorios
+  
                 }
+                
             }
+            int suma = 0;
 
-            for (int fila = 0; fila < matriz.GetLength(0); fila++)//vamos a mostrar el array
+            for (int i = 0; i < array.GetLength(0); i++)//muestra las filas
+
             {
-                for (int columna = 0; columna < matriz.GetLength(1); columna++) 
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    Console.Write(matriz[fila,columna]+"\t");
+                    Console.Write(array[i, j]+ "\t");
+                    suma += array[i,j];
                 }
-                Console.WriteLine();//salta a la siguiente fila
+                Console.WriteLine("|\t "+suma);
+                suma = 0;
             }
+            Console.WriteLine("_________________________       |");
+            int sumatotal = 0;
+            for (int j = 0; j < array.GetLength(1); j++)//muestra las filas
+
+            {
+                for (int i = 0; i < array.GetLength(0); i++)
+                {
+                    
+                    suma += array[i, j];
+                    sumatotal += array[i, j];
+                }
+                Console.Write( suma+"\t");
+                suma = 0;
+            }
+            Console.WriteLine("|\t "+sumatotal);
 
         }
     }
